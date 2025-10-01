@@ -1,14 +1,13 @@
-/* Fondo con imagen y fallback */
+/* Fondo con imagen*/
 body {
   background: url('https://thumbs.dreamstime.com/b/pixel-art-scene-castle-path-trees-lake-mountains-sky-asset-perfectly-suits-indie-mobile-game-digital-illustration-offers-386922765.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-color: #f9f3e7; /* color de respaldo */
   font-family: 'Uncial Antiqua', cursive;
 }
 
-/* Estilos de las tarjetas con transparencia */
+/* Estilos con transparencia */
 .card {
-  background: rgba(255, 247, 225, 0.85); /* semi-transparente */
+  background: rgba(255, 247, 225, 0.75); /* semi-transparente */
   border: 3px solid #c9a66b;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -57,7 +56,7 @@ input[type="color"] {
   border-color: #a36c4b;
 }
 
-/* Ficha superpuesta tipo modal */
+/* Posición y estilo de la Ficha generada al hacer click en el boton */
 #fichaPersonaje {
   position: fixed;
   top: 50%;
