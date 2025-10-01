@@ -19,7 +19,7 @@
       <div class="card p-4">
         <h2 class="text-center mb-4">Creador de Personaje RPG</h2>
         <form id="formularioPersonaje">
-          <div class="mb-3"><label>Nombre:<input type="text" class="form-control" id="nombre" name="nombre" required></label></div>
+          <div class="mb-3"><label>Nombre:<input type="text" class="form-control" id="nombre" name="nombre" maxlength="15" required></label></div>
           <div class="mb-3"><label>Edad:<input type="number" class="form-control" id="edad" name="edad" min="1" max="9999" required></label></div>
 
           <!-- No sé si 9999 como máxima edad es un número largo teniendo en cuenta lo aprendido de SQL,
@@ -32,7 +32,7 @@
 
 
 
-          <div class="mb-3"><label>Alineación:<input type="text" class="form-control" id="alineacion" name="alineacion" placeholder="Bien, Mal, Neutral" required></label></div>
+          <div class="mb-3"><label>Alineación:<input type="text" class="form-control" id="alineacion" maxlength="7" name="alineacion" placeholder="Bien, Mal, Neutral" required></label></div>
           <div class="mb-3">
             <label>Estadísticas (15 puntos para repartir):</label>
             <div class="row g-2">
@@ -67,7 +67,8 @@
 </div>
 <div class="resetInput mt-2 text-center">
   <input type="reset" id="resetBtn" value="Reiniciar" class="btn btn-secondary">
-  <!-- Input de reset sencillo con valores de bootstrap. mt-2 para darle margen, text-center para centrarlo
+  <!-- Input de reset sencillo con valores de bootstrap. Lo pongo abajo del todo para aprovechar el sistema "responsive"
+   del propio bootstrap. utilizo mt-2 para darle margen, text-center para centrarlo
    y btn-secondary para el color gris.-->
 </div>
 
