@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Me ayude un poco de "https://www.docuwriter.ai/css-to-bootstrap-code-converter" para ir viendo la similitud con CSS
+   Ayuda bastante verlo visualmente, como si fueran 12 cajas que puedes llenar con una unidad y que son completamente "responsive"
+   para con el resto de elementos-->
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
@@ -16,10 +19,18 @@
         <h2 class="text-center mb-4">Creador de Personaje RPG</h2>
         <form id="formularioPersonaje">
           <div class="mb-3"><label>Nombre:<input type="text" class="form-control" id="nombre" name="nombre" required></label></div>
-          <div class="mb-3"><label>Edad:<input type="number" class="form-control" id="edad" name="edad" min="1" max="999" required></label></div>
+          <div class="mb-3"><label>Edad:<input type="number" class="form-control" id="edad" name="edad" min="1" max="9999" required></label></div>
+
+          <!-- No sé si 9999 como máxima edad es un número largo teniendo en cuenta lo aprendido de SQL,
+            pero hay que respetar las razas élficas -->
+
           <div class="mb-3"><label>Clase:<select class="form-select" id="clase" name="clase" required>
             <option value="">Selecciona una clase</option><option>Guerrero</option><option>Mago</option><option>Explorador</option><option>Sacerdote</option><option>Druida</option>
           </select></label></div>
+          <!-- Input selector de una opción -->
+
+
+
           <div class="mb-3"><label>Alineación:<input type="text" class="form-control" id="alineacion" name="alineacion" placeholder="Bien, Mal, Neutral" required></label></div>
           <div class="mb-3">
             <label>Estadísticas (15 puntos para repartir):</label>
@@ -30,10 +41,13 @@
             </div>
             <div class="puntos-restantes" id="puntosRestantes">Puntos restantes: 15</div>
           </div>
+  <!-- Input de valores númericos con javascript para limitar el reparto de puntos y hacerlo ineractivo -->
+
           <div class="mb-3"><label>Arma:<select class="form-select" id="arma" name="arma" required>
             <option value="">Selecciona un arma</option><option>Espada</option><option>Bastón de magia</option><option>Arco</option><option>Códice mágico</option>
           </select></label></div>
           <div class="mb-3"><label>Color de piel:<input type="color" class="form-control" id="colorPiel" name="colorPiel" value="#f5d6b2"></label></div>
+           <!-- Input de "gradiente de colores" -->
           <div class="mb-3"><label>Imagen:<input type="file" class="form-control" id="avatar" name="avatar" accept="image/*"></label></div>
           <div class="mb-3"><label>Habilidades (Escoger 2):</label>
             <div class="form-check"><input class="form-check-input" type="checkbox" value="Fuerza bruta" id="habilidad1"><label class="form-check-label" for="habilidad1">Fuerza bruta</label></div>
@@ -42,6 +56,7 @@
             <div class="form-check"><input class="form-check-input" type="checkbox" value="Idiomas" id="habilidad4"><label class="form-check-label" for="habilidad4">Idiomas</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" value="Habilidades en la naturaleza" id="habilidad5"><label class="form-check-label" for="habilidad5">Habilidades en la naturaleza</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" value="Experiencia en combate" id="habilidad6"><label class="form-check-label" for="habilidad6">Experiencia en combate</label></div>
+        <!-- Input selector de varias opciones -->
           </div>
           <div class="d-grid"><button type="button" id="btnFicha" class="btn btn-success">Crear personaje</button></div>
         </form>

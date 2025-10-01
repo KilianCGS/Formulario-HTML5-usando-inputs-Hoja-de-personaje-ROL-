@@ -7,17 +7,17 @@ body {
 
 /* Estilos con transparencia */
 .card {
-  background: rgba(255, 247, 225, 0.75); /* semi-transparente */
+  background: rgba(255, 247, 225, 0.65); /* semi-transparente para que sea más limpio a la vista*/
   border: 3px solid #c9a66b;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px); /* opcional: difumina el fondo detrás */
+  backdrop-filter: blur(5px); /* efecto interesante: difumina el fondo detrás */
 }
 
 /* Encabezados */
 h2 {
   font-size: 2rem;
-  color: #6b3e00;
+  color: brown;
   text-shadow: 1px 1px 2px #fff;
 }
 
@@ -71,7 +71,7 @@ input[type="color"] {
   overflow-y: auto;
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   z-index: 1000;
-  display: none; /* inicialmente oculta */
+  display: none; /* inicialmente oculta , se genera despues con el boton correspondiente*/
 }
 
 /* Botón cerrar ficha */

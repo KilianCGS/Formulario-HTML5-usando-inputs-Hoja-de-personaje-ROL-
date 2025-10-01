@@ -1,6 +1,4 @@
-
-  
-const puntosMaximos = 15;
+ const puntosMaximos = 15;
 const fuerza = document.getElementById('fuerza');
 const destreza = document.getElementById('destreza');
 const inteligencia = document.getElementById('inteligencia');
@@ -33,7 +31,7 @@ function actualizarPuntosRestantes() {
     if (document.activeElement === inteligencia) inteligencia.value = parseInt(inteligencia.value) - exceso;
   }
 }
-
+/*Actualizar puntos*/
 fuerza.addEventListener('input', actualizarPuntosRestantes);
 destreza.addEventListener('input', actualizarPuntosRestantes);
 inteligencia.addEventListener('input', actualizarPuntosRestantes);
@@ -47,14 +45,14 @@ btnFicha.addEventListener('click', function() {
   const colorPiel = document.getElementById('colorPiel').value;
   const avatarInput = document.getElementById('avatar');
 
-  /*Habilidades como un array para facilitar que se pongan en la ficha posteriormente*/ 
+  /*Habilidades como un array vacío para facilitar que se pongan en la ficha posteriormente*/ 
   const habilidades = [];
   for (let i = 1; i <= 6; i++) {
     const checkbox = document.getElementById('habilidad' + i);
     if (checkbox.checked) habilidades.push(checkbox.value);
   }
 
-  // Contenido básico de la ficha
+  // Contenido básico de la ficha. Quiero desglosarla para entender la lógica y operadores
   ficha.innerHTML = `
     <button class="btn btn-cerrar btn-sm" id="cerrarFicha">X</button>
     <div class="text-center" id="contenidoFicha">
@@ -74,7 +72,7 @@ btnFicha.addEventListener('click', function() {
     </div>
   `;
 
-  // Mostrar imagen si se seleccionó
+  // Mostrar imagen si fue seleccionada en "seleccionar archivo"
   if (avatarInput.files && avatarInput.files[0]) {
     const reader = new FileReader();
     reader.onload = function(e) {
@@ -93,7 +91,7 @@ btnFicha.addEventListener('click', function() {
 
   ficha.style.display = 'block';
 
-  // Cerrar ficha
+  // Cerrar ficha mediante el clásico botón X
   document.getElementById('cerrarFicha').addEventListener('click', () => {
     ficha.style.display = 'none';
   });
